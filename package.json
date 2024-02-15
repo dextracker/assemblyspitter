@@ -1,7 +1,7 @@
 {
     "name": "assemblyspitter",
     "displayName": "Assembly Spitter",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A VS Code extension to extract assembly blocks from Solidity files.",
     "main": "extension.js",
     "engines": {
