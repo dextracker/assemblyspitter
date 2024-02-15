@@ -1,0 +1,28 @@
+{
+    "name": "assemblyspitter",
+    "displayName": "Assembly Spitter",
+    "version": "1.0.1",
+    "description": "A VS Code extension to extract assembly blocks from Solidity files.",
+    "main": "extension.js",
+    "engines": {
+        "vscode": "^1.8.0"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "assemblyspitter.findAssembly",
+                "title": "Find Assembly Blocks"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run esbuild-base -- --minify",
+        "esbuild-base": "esbuild ./extension.js --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node"
+    },
+    "activationEvents": [
+        "onCommand:assemblyspitter.findAssembly"
+    ],
+    "dependencies": {
+        "vsce": "^2.15.0"
+    }
+}
